@@ -16,5 +16,5 @@ const {displayMovies} = require('./displayMovies.js');
 //   alert('Oh no! Something went wrong.\nCheck the console for details.')
 //   console.log(error);
 // });
-
+console.log(document.querySelector("#container"));
 displayMovies();

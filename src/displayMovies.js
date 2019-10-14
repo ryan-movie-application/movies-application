@@ -14,7 +14,10 @@ module.exports = {
                 });
 
                 console.log("I ran");
-                console.log(document.getElementsByClassName("container").childNodes);
+                let h1 = document.querySelector("#container").firstElementChild;
+
+                h1.textContent('hello')
+
             });
     }
 };
