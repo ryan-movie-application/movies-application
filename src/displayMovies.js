@@ -14,9 +14,8 @@ module.exports = {
                 });
 
                 console.log("I ran");
-                let h1 = document.querySelector("#container").firstElementChild;
+                document.getElementById("container").innerHTML = dynamicHTML;
 
-                h1.textContent('hello')
 
             });
     }
