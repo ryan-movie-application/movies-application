@@ -8,10 +8,12 @@
  * require style imports
  */
 
-const {displayMovies} = require('./displayMovies.js');
+import {displayMovies} from './displayMovies.js';
 
-const {addMovieClickEvent} = require('./addMovie.js');
+import {addMovieClickEvent} from "./addMovie";
+
 
 displayMovies();
 
 addMovieClickEvent();
+

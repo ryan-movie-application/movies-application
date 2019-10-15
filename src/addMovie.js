@@ -1,18 +1,18 @@
 "use strict";
 
-const {renderMovies} = require('./addMovie.js');
+/**
+ * Import CREATEMOVIECARD() to use in ADDMOVIE()
+ * **/
+import {createMovieCard} from './displayMovies';
 
-module.exports = {
-    addMovieClickEvent : () => {
+export const addMovieClickEvent = () => {
         document.getElementById("add-movie-btn").addEventListener("click", function(e) {
             e.preventDefault();
             addMovie();
         });
+}; //addMovieClickEvent();
 
-} //addMovieClickEvent();
-}; // module.exports addMovieClickEvent()
-
-function addMovie() {
+export const addMovie = () => {
     let addMovieTitle = document.getElementById("add-movie-title").value;
     let addMovieRating = document.getElementById("add-movie-rating").value;
     let newMovie = {
@@ -29,10 +29,15 @@ function addMovie() {
     };
     fetch(url, options)
         .then((response) => {
-            console.log(response);
-            renderMovies(response.title, response.rating, response.id);
+            return response.json();
         })
-        .catch(function() {
-            console.log("Hey we couldn't add a movie or update the movies.")
-        });
-} //addMovie()
+        .then((response) => {
+
+            let newMovieHTML = createMovieCard(response.title, response.title, response.id);
+
+            document.getElementById("container").insertAdjacentHTML('afterend', newMovieHTML);
+        })
+
+
+
+}; //addMovie()
