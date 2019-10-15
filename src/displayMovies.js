@@ -1,7 +1,8 @@
-const {getMovies} = require('./api.js');
+"use strict";
 
-
-
+/**
+ * DISPLAYMOVIES() : function fetches all movies in database, loops through them and stores them in a variable which is then inserted into the #container div in index.html.
+ * **/
 
 module.exports = {
     displayMovies: () => {
@@ -17,12 +18,14 @@ module.exports = {
                 document.getElementById("container").innerHTML = dynamicHTML;
 
 
-            });
-    }
-};
+            }); //last .then
+    } //displayMovies()
+}; //module.exports displayMovies()
+
+/** RENDERMOVIES() : function returns a bootstrap card to DISPLAYMOVIES(). Card contains a dynamic movie title, movie rating and database id that is attached to the edit button. **/
 
 function renderMovies(title,rating, id) {
-    //declare empty variable to hold HTML that is being dynamically created
+    //Bootstrap card
     return `
     <div class="card" style="width: 18rem">
       <div class="card-body">
@@ -33,4 +36,4 @@ function renderMovies(title,rating, id) {
       </div>
     </div>
   `;
-}
+} //renderMovies()
