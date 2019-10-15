@@ -18,15 +18,16 @@ export const displayMovies = () => {
             document.getElementById("container").innerHTML = dynamicHTML;
 
             editMovieClickEvent();
+
             closeModalClickEvent();
+
+
         })
 }; //displayMovies()
-
 
 /**
  * renderMovies() : function returns a bootstrap card to displayMovies(). Card contains a dynamic movie title, movie rating and database id that is attached to the edit button.
  * **/
-
  export const createMovieCard = (title,rating, id) => {
     return `
     <div class="card" style="width: 18rem">
