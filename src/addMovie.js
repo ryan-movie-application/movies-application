@@ -18,7 +18,7 @@ export const addMovieClickEvent = () => {
 }; //addMovieClickEvent();
 
 /**
- * addMovie() : function sends values in add move inputs to json.db and then returns the movie which is used to create new html for the added Movie
+ * addMovie() : function sends values in add movie inputs to json.db and then returns the movie which is used to create new html for the added movie
  * **/
 
 export const addMovie = () => {

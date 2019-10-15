@@ -1,8 +1,10 @@
 "use strict";
 
+
 /**
  * displayMovies() : function fetches all movies in database, loops through them and stores them in a variable which is then inserted into the #container div in index.html.
  * **/
+import {editMovieClickEvent, closeModalClickEvent} from './editMovie';
 
 export const displayMovies = () => {
     return fetch('/api/movies')
@@ -13,12 +15,11 @@ export const displayMovies = () => {
                 dynamicHTML += createMovieCard(title, rating, id);
             });
 
-            console.log("I ran");
-
             document.getElementById("container").innerHTML = dynamicHTML;
 
-
-        }); //last .then
+            editMovieClickEvent();
+            closeModalClickEvent();
+        })
 }; //displayMovies()
 
 
@@ -39,4 +40,6 @@ export const displayMovies = () => {
   `;
     //Bootstrap card
 }; //renderMovies()
+
+
 
