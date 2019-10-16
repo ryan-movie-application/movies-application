@@ -7,11 +7,10 @@
 /**
  * require style imports
  */
-// import {openModalClickEvent} from "./editMovie";
 
 import {displayMovies} from './displayMovies.js';
 
-import {addMovieClickEvent} from "./addMovie";
+import {addMovieClickEvent} from "./clickEvents";
 
 
 displayMovies();

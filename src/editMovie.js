@@ -1,36 +1,7 @@
 "use strict";
 
-/** **/
-
-
-export const editMovieClickEvent = () => {
-
-    let editButtons = document.getElementsByClassName("open-modal-btn");
-
-    for(let i = 0; i < editButtons.length; i++) {
-        editButtons[i].addEventListener("click", function() {
-            document.getElementById('edit-movie-modal').style.display = "block";
-        }); // event listener
-    } //for
-}; //editMovieClickEvent()
-
-export const closeModalClickEvent = () => {
-    document.getElementById('close-movie-modal').addEventListener("click", function() {
-        document.getElementById('edit-movie-modal').style.display = "none";
-    }) //event listener
-};
-
-export const saveChangesClickEvent = () => {
-    document.getElementById('save-changes').addEventListener("click", function() {
-        editMovie();
-    })
-};
-
 export const editMovie = () => {
-
-
     let editedMovieTitle = document.getElementById('edit-movie-title').value;
-
     let editedMovieRating = document.getElementById('edit-movie-rating').value;
 
 
@@ -39,6 +10,7 @@ export const editMovie = () => {
         rating: editedMovieRating,
         id: movieId
     };
+
     const url = `/api/movies/${movieId}`;
     const options = {
         method: 'PUT',
@@ -47,10 +19,12 @@ export const editMovie = () => {
         },
         body: JSON.stringify(editedMovie),
     };
+
     fetch(url, options)
 
 
         .catch(function() {
             console.log("Hey we couldn't edit that movie")
         });
-}
+
+}; //editMovie()
