@@ -1,6 +1,8 @@
 "use strict";
 
-export const editMovie = () => {
+import {displayMovies} from "./displayMovies";
+
+export const editMovie = (currentMovieId) => {
     let editedMovieTitle = document.getElementById('edit-movie-title').value;
     let editedMovieRating = document.getElementById('edit-movie-rating').value;
 
@@ -8,10 +10,10 @@ export const editMovie = () => {
     const editedMovie = {
         title: editedMovieTitle,
         rating: editedMovieRating,
-        id: movieId
+        id: currentMovieId
     };
 
-    const url = `/api/movies/${movieId}`;
+    const url = `/api/movies/${currentMovieId}`;
     const options = {
         method: 'PUT',
         headers: {
@@ -21,10 +23,11 @@ export const editMovie = () => {
     };
 
     fetch(url, options)
-
-
         .catch(function() {
             console.log("Hey we couldn't edit that movie")
         });
+
+    displayMovies();
+
 
 }; //editMovie()

@@ -1,29 +1,19 @@
 {
   "movies": [
     {
-      "title": "Casablanca",
-      "rating": "4",
-      "id": 1
-    },
-    {
-      "title": "Star Wars: A New Hope",
+      "title": "Die Hard",
       "rating": "5",
-      "id": 2
-    },
-    {
-      "title": "Star Wars",
-      "rating": "1",
-      "id": 3
-    },
-    {
-      "title": "Test Value",
-      "rating": "1",
       "id": 4
     },
     {
-      "title": "Test Value",
+      "title": "Harry Potter 5",
       "rating": "1",
       "id": 5
+    },
+    {
+      "title": "Casablanca",
+      "rating": "4",
+      "id": 6
     }
   ]
 }

@@ -1,9 +1,9 @@
 "use strict";
 
 
-// Import createMovieCard() to use in addMovie() .then fetch request
+// Import displayMovies() to use after movie is added to json database.
 
-import {createMovieCard} from './displayMovies';
+import {displayMovies} from './displayMovies';
 
 /**
  * addMovie() : function sends values in add movie inputs to json.db and then returns the movie which is used to create new html for the added movie
@@ -26,17 +26,8 @@ export const addMovie = () => {
         body: JSON.stringify(newMovie),
     };
 
-    fetch(url, options)
-        .then((response) => {
-            return response.json();
-        })
-        .then((response) => {
+    fetch(url, options);
 
-            let newMovieHTML = createMovieCard(response.title, response.title, response.id);
-
-            document.getElementById("container").insertAdjacentHTML('afterend', newMovieHTML);
-        }) //last .then
-
-
+    displayMovies();
 
 }; //addMovie()
