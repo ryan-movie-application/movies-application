@@ -4,7 +4,7 @@
 /**
  * displayMovies() : function fetches all movies in database, loops through them and stores them in a variable which is then inserted into the #container div in index.html.
  * **/
-import {editMovieClickEvent, closeModalClickEvent} from './editMovie';
+import {editMovieClickEvent, closeModalClickEvent, saveChangesClickEvent} from './editMovie';
 
 export const displayMovies = () => {
     return fetch('/api/movies')
@@ -20,6 +20,8 @@ export const displayMovies = () => {
             editMovieClickEvent();
 
             closeModalClickEvent();
+
+            saveChangesClickEvent();
 
 
         })
