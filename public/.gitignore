@@ -1,2 +1,6 @@
 main.js
 *.map
+.idea/*
+*.iml
+out/*
+.DS_Store

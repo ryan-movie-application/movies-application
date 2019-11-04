@@ -6,19 +6,20 @@
     <link rel="stylesheet" href="/style.css"/>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 </head>
-<body>
+<body class="container-fluid">
 
+    <h1 class="m-3">My Movies</h1>
     <!--BOOTSTRAP MOVIE CARDS WILL APPEAR HERE-->
-    <div id="container"></div>
+    <div id="container" class="mb-2"></div>
 
 
     <!--ALLOWS USER TO ENTER A MOVIE-->
-    <div>
+    <div id="add-movie">
         <form>
             <div class="form-group">
-                <label for="add-movie-title">Enter Movie Title</label>
+                <h3>Enter Movie Title</h3>
                 <input type="text" id="add-movie-title" name="new-movie-title">
-                <label for="add-movie-rating">Select Movie Rating</label>
+                <h3>Select Movie Rating</h3>
                 <select class="form-control" id="add-movie-rating">
                     <option value="1">1</option>
                     <option value="2">2</option>

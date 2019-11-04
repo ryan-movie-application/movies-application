@@ -31,9 +31,9 @@ export const displayMovies = () => {
     <div class="card" style="width: 18rem">
       <div class="card-body">
       <h5 class="card-title">${title}</h5>
-      <h6 class="card-subtitle mb-2 text-muted" id="card-movie-rating">${rating}</h6>
-      <button id=${id} class="open-modal-btn" type="button" class="btn btn-secondary">Edit</button>
-      <button id=${id} class="delete-movie-btn" type="button" class="btn btn-secondary">Delete</button>
+      <h6 class="card-subtitle mb-2 text-muted" id="card-movie-rating">Rating: ${rating}</h6>
+      <button id=${id} class="open-modal-btn  btn-secondary mb-1 btn-light" type="button">Edit</button>
+      <button id=${id} class="delete-movie-btn btn btn-secondary mb-1 btn-danger" type="button">Delete</button>
       </div>
     </div>
   `;
